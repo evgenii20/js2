@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    /*justify-content: flex-end;*/
+    border-bottom: ridge;
+    background-color: #2f2a2d;
+    padding: 30px 80px;
+    color: #fafafa;
+}
+
+.btn-cart {
+    background-color: #fafafa;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    color: #2f2a2d;
+    border-radius: 5px;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
+}
