@@ -3,9 +3,13 @@
   <div id="app">
     <!--    Фильтры-->
     <!--    <Header @toggle-cart="toggleCartStatus" @filter-products="filtered"/>-->
+    <!-- передаём функцию "filters" через событие "@filter-products" в "Header"-->
     <Header @toggle-cart="toggleCartStatus" @filter-products="filters"/>
-<!--        <Header @toggle-cart="toggleCartStatus" />-->
-    <Cart @add-to-cart="addToCart" :cartProducts="cartProducts" :isVisibleCart="isVisibleCart"/>
+    <!--    <Header @toggle-cart="toggleCartStatus"/>-->
+    <!--        <Header @toggle-cart="toggleCartStatus" />-->
+
+    <!--    <Cart @add-to-cart="addToCart" :cartProducts="cartProducts" :isVisibleCart="isVisibleCart"/>-->
+
     <!--    <SearchForm :filter-products="filters" />-->
     <!--    <header>-->
     <!--      <div class="logo">Интернет-магазин</div>-->
@@ -37,7 +41,7 @@
       <br/>
       <!--      Корзина-->
       <!--      <Cart :cartProducts="cartProducts" />-->
-      <!--      <Cart @add-to-cart="addToCart" :cartProducts="cartProducts" :isVisibleCart="isVisibleCart"/>-->
+      <Cart @add-to-cart="addToCart" :cartProducts="cartProducts" :isVisibleCart="isVisibleCart"/>
     </main>
   </div>
   <!--  <img alt="Vue logo" src="./assets/logo.png">-->
@@ -83,7 +87,7 @@ export default {
     cartProducts: [],
     imgCatalog: '',
     filtered: [], // отфильтрованные товары
-    userSearch: '',
+    // userSearch: '', //удаляем т.к. используем в Header
     // allProducts: [],
     isVisibleCart: false,
   }),
@@ -333,9 +337,11 @@ img {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
   border-radius: 5px;
   box-sizing: border-box;
-  right: 0;
-  top: 130%;
-  /*position: absolute;*/
+  /*right: 0;*/
+  right: 78px;
+  /*top: 130%;*/
+  top: 14%;
+  position: absolute;
   background-color: white;
   padding: 20px;
   color: black;
